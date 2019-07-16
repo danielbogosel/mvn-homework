@@ -1,6 +1,9 @@
 package ro.itschool.mvnbase.tema11;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import static java.util.Collections.unmodifiableList;
 
 public class DocumentService {
     private final List<Documents> documents;
@@ -10,7 +13,7 @@ public class DocumentService {
     }
 
     public List<Documents> getAll() {
-        return documents;
+        return new ArrayList<>(documents);
     }
 
 }
