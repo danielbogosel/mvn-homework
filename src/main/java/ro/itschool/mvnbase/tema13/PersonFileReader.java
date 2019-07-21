@@ -14,7 +14,9 @@ public class PersonFileReader {
         this.docList = fetchList(path);
     }
 
-
+    public List<Person> getDocList() {
+        return docList;
+    }
 
     private List<Person> fetchList(String path) throws IOException {
         List<Person> result = new ArrayList<>();
@@ -22,8 +24,8 @@ public class PersonFileReader {
         String line;
         String splitSting[];
         while ((line=breader.readLine())!=null){
-            splitSting=line.split("|");
-            result.add(new Person(splitSting[0],splitSting[1],Integer.valueOf(splitSting[2])));
+            splitSting=line.split("\\|");
+            result.add(new Person(splitSting[0],splitSting[1],Integer.parseInt(splitSting[2])));
 
         }
         return result;

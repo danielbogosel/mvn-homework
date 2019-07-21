@@ -1,6 +1,7 @@
 package ro.itschool.mvnbase.tema13;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class Person {
     private final String id;
@@ -8,16 +9,20 @@ public class Person {
     private final String address;
     private final int age;
 
-    public Person(String id, String name, String address, int age) {
+    public Person(String name,  int age) {
+        this(name, "", age);
+    }
+    public Person(String name, String address, int age) {
+        this(UUID.randomUUID().toString(), name, address, age);
+    }
+    public Person(String id,String name, String address, int age) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.age = age;
     }
 
-    public Person(String name, String address, int age) {
 
-    }
 
 
     public String getId() {

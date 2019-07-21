@@ -5,9 +5,10 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args)throws IOException {
         ExamResultReader examResult = new ExamResultReader("src/main/resources/results.in");
-        System.out.println(examResult.toString());
+        System.out.println(examResult.getDocList());
 
-        PersonFileReader p1 = new PersonFileReader("src/main/resources/person.in");
-        System.out.println(p1.toString());
+       PersonFileReader p = new PersonFileReader("src/main/resources/results.in");
+        System.out.println(p.getDocList());
+
     }
 }
