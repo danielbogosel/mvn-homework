@@ -9,7 +9,7 @@ public class Main {
         System.out.println(cr.getCountryList());
 
         CountryStatistisc countryStatistisc = new CountryStatistisc(cr.getCountryList());
-        System.out.println(countryStatistisc.getAllCountries());
+        System.out.println(countryStatistisc.getAllCountriesName());
 
     }
 

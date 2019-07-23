@@ -2,6 +2,7 @@ package ro.itschool.mvnbase.tema14;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class CountryStatistisc {
     private final List<Country> statisticsList;
@@ -14,12 +15,28 @@ public class CountryStatistisc {
         return statisticsList;
     }
 
-    public String getAllCountries() {
+
+    public List<String> getAllCountriesName() {
+        List<String> countryList = new ArrayList<>();
         for (Country country : statisticsList) {
-
-            return country.getName();
+            countryList.add(country.getName());
         }
-
-        return null;
+        return countryList;
     }
+
+    public Country getCountriesStartingWithLetter(String letter) {
+        String Countries="";
+        for (Country country : getStatisticsList()) {
+            if (country.getName().startsWith(letter)) {
+                Countries+=country.getName()+" ";
+            }
+
+        }
+        return Countries;
+    }
+    public String getCountryCapital(String countryName){
+
+    }
+
+
 }
