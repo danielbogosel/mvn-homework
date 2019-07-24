@@ -1,5 +1,7 @@
 package ro.itschool.mvnbase.tema14;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Objects;
 
 public class Country {
@@ -7,12 +9,19 @@ public class Country {
     private final String capital;
     private final long population;
     private final int area;
+    private final String region;
 
-    public Country(String name, String capital, long population, int area) {
+    public Country(@JsonProperty("name") String name,
+                   @JsonProperty("capital") String capital,
+                   @JsonProperty("population") long population,
+                   @JsonProperty("area") int area,
+                   @JsonProperty("region") String region) {
+
         this.name = name;
         this.capital = capital;
         this.population = population;
         this.area = area;
+        this.region = region;
     }
 
     public String getName() {
@@ -29,6 +38,10 @@ public class Country {
 
     public int getArea() {
         return area;
+    }
+
+    public String getRegion() {
+        return region;
     }
 
     @Override

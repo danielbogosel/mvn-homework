@@ -26,7 +26,9 @@ public class CountryReader {
             result.add(new Country(splitString[0],
                     splitString[1],
                     Long.parseLong(splitString[2]),
-                    Integer.parseInt(splitString[3])));
+                    Integer.parseInt(splitString[3]),
+                    "n/a"
+            ));
 
         }
         return result;

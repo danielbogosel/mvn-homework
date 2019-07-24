@@ -20,7 +20,9 @@ public class CountryPrinter {
         if(opened){
             docPrinter =openWithAppend();
         }
-        docPrinter.write(String.format("%s|%s|%l|%i", country.getName(), country.getCapital(), country.getPopulation(),country.getArea()));
+
+        docPrinter.write(String.format("The country of %s has capital in %s with a population of %s on an area of %s km2"
+                , country.getName(), country.getCapital(), country.getPopulation(),country.getArea()));
         docPrinter.newLine();
         docPrinter.flush();
 
