@@ -23,7 +23,7 @@ public class CountryStatistics {
     public List<Country> getCountriesBordering(String borderInitials) {
         List<Country> result = new ArrayList<>();
         for (Country country : countries) {
-            if (country.getBorders().equals(borderInitials)) {
+            if (country.getBorders().contains(borderInitials)) {
                 result.add(country);
             }
         }

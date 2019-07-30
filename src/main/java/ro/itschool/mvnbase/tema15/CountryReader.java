@@ -9,8 +9,6 @@ import java.util.List;
 
 public class CountryReader {
     private final List<Country> countries;
-    private final List<String> border = new ArrayList<>();
-
 
     public List<Country> getCountries() {
         return countries;
@@ -23,30 +21,36 @@ public class CountryReader {
 
     private List<Country> fetchCountry(String path) throws IOException {
         List<Country> result = new ArrayList<>();
+        List<String> border = new ArrayList<>();
         String line;
-        String splitString[] = null;
+        String splitString[];
         String splitBorder[];
         BufferedReader breader = new BufferedReader(new FileReader(new File(path)));
         while ((line = breader.readLine()) != null) {
             splitString = line.split("\\|");
 
-            if (splitString[5].length() != 0) {
+            if (splitString.length > 5) {
                 splitBorder = splitString[5].split("~");
-                border.add(String.valueOf(splitBorder));
-            } else
-                border.isEmpty();
-        }
-        result.add(new Country(splitString[0],
-                splitString[1],
-                Long.parseLong(splitString[2]),
-                Integer.parseInt(splitString[3]),
-                splitString[4],
-                List.of(splitString[5]))
-        );
+                for (String sBorder : splitBorder) {
+                    border.add(sBorder);
+                }
 
+
+                result.add(new Country(splitString[0],
+                        splitString[1],
+                        Long.parseLong(splitString[2]),
+                        Integer.parseInt(splitString[3]),
+                        splitString[4],
+                        border)
+                );
+
+
+            }
+        }
 
         return result;
     }
 }
+
 
 
