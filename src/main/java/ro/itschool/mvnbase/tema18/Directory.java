@@ -4,7 +4,7 @@ public class Directory {
     public Directory() {
     }
 
-    public static final String[] words = new String[]{"apa", "morcov", "sarmale", "telefon", "fasole","bujor","busuioc","electroliza","polen","macaroane"};
+    public static final String[] words = new String[]{"apa", "morcov", "sarmale", "telefon", "fasole", "bujor", "busuioc", "electroliza", "polen", "macaroane"};
 
 
     protected String getWord(int wordNumber) {
