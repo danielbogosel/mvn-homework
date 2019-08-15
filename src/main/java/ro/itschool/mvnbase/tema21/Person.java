@@ -8,13 +8,7 @@ public class Person {
     private final String city;
     private  boolean hasCar;
 
-    public Person(String name,String city,int age){
-        this.name = name;
-        this.city = city;
-        this.age = age;
 
-
-    }
     public Person(String name, int age, String city, boolean hasCar) {
         this.name = name;
         this.age = age;
