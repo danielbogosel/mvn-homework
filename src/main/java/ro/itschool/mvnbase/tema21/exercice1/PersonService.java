@@ -15,9 +15,9 @@ public class PersonService {
 
         System.out.println(getPersonsName(persons, value -> value.getAge() > 17));
         System.out.println("");
-
         System.out.println(modifyList(persons, value -> value.getName().startsWith("A")));
-        System.out.println(modifyList(persons, value -> value.isHasCar()));
+        System.out.println(getPersonsName(persons, value -> value.isHasCar()));
+        System.out.println("");
 
         List<String> allPerson = persons.stream()
                 .map(person -> "<" + person.getName() + ">:<" + person.getCity() + ">:<" + person.getAge() + ">")
