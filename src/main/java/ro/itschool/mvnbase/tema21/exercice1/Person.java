@@ -1,4 +1,4 @@
-package ro.itschool.mvnbase.tema21;
+package ro.itschool.mvnbase.tema21.exercice1;
 
 import java.util.Objects;
 
