@@ -1,9 +1,9 @@
-package ro.itschool.mvnbase.tema21;
+package ro.itschool.mvnbase.tema21.exercice2;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DocumentService {
+public class DocumentServices {
     public static void main(String[] args) {
         List<Document> documents = List.of(new Document("doc1", "1", Status.FAILED),
                 new Document("doc2", "2", Status.IN_PROGRESS),

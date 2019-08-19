@@ -1,13 +1,17 @@
 package ro.itschool.mvnbase.tema21.exercice1;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Objects;
+
 
 public class Person {
     private final String name;
     private final int age;
     private final String city;
-    private  boolean hasCar;
-
+    private boolean hasCar;
 
     public Person(String name, int age, String city, boolean hasCar) {
         this.name = name;
@@ -56,6 +60,6 @@ public class Person {
                 ", age=" + age +
                 ", city='" + city + '\'' +
                 ", hasCar=" + hasCar +
-        '}'+ '\n';
+                '}' + '\n';
     }
 }

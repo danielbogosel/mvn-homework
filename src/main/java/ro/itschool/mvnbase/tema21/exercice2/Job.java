@@ -1,4 +1,4 @@
-package ro.itschool.mvnbase.tema21;
+package ro.itschool.mvnbase.tema21.exercice2;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -14,6 +14,22 @@ public class Job {
         this.startDate = startDate;
         this.deadline = deadline;
         this.urgency = urgency;
+    }
+
+    public String getDocumentId() {
+        return documentId;
+    }
+
+    public LocalDateTime getStartDate() {
+        return startDate;
+    }
+
+    public LocalDateTime getDeadline() {
+        return deadline;
+    }
+
+    public Urgency getUrgency() {
+        return urgency;
     }
 
     @Override

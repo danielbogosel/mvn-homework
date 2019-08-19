@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class PersonService {
+public class PersonLambdaInterface {
     public static void main(String[] args) {
         List<Person> persons = List.of(new Person("Ana", 24, "Oradea", true),
                 new Person("Mihai", 17, "Cluj", false),
