@@ -27,7 +27,6 @@ public class StreamMain {
 
         final List<Person> personsNameWithA = persons.stream()
                 .filter(person -> person.getName().startsWith("A"))
-                .map(person -> new Person(person.getName(), person.getAge(), person.getCity(), person.isHasCar()))
                 .collect(Collectors.toList());
         personsNameWithA.forEach(name -> System.out.println(name));
 
